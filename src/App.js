@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import CovidApp from "./components/CovidApp";
+import { Route, BrowserRouter as Router, Redirect } from 'react-router-dom';
+import Header from "./components/Header";
+import Diagnosis from "./components/Diagnosis";
+import GuidelineCard from "./components/GuidelineCard";
+import Main from "./components/Main"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Header></Header>
+        <Router>
+          <Route exact path="/">
+            <Redirect exact to="/Home"/>
+          </Route>                
+          <Route path="/Home" component={CovidApp}/>
+          <Route path="/Guidelines" component={GuidelineCard}/>
+          <Route path="/Diagnosis" component={Diagnosis}/>
+        </Router>
+      </div>
+    );
+  }
 }
 
 export default App;
