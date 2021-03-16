@@ -13,12 +13,13 @@ class DisplayPanels extends Component {
     const { title, number, dataChange, classes } = this.props;
     return (
       <div className={classes.panel}>
-        <h3 className={classes.heading}>{title}</h3>
-        <h3 className={classes.number}>{number}</h3>
-        <p className={classes.dataChange}>
+        <div className={classes.heading}><b>{title}</b></div>
+        <hr/>
+        <div className={classes.number}>{number}</div>
+        <div className={classes.dataChange}>
           {dataChange > 0 ? "+" : ""}
           {dataChange}
-        </p>
+        </div>
       </div>
     );
   }

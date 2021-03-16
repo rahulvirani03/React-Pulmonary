@@ -110,7 +110,7 @@ export default {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
-
+    
     [sizes.down("md")]: {
       marginTop: "2.5rem",
       padding: "1.5rem",

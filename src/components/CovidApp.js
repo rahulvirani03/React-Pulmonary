@@ -158,7 +158,6 @@ class CovidApp extends Component {
 
         <div>
           <Overview
-           
             data={this.state.todayData}
             loadingStatus={this.loadingStatus}
           />

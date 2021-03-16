@@ -5,8 +5,8 @@ export default {
   panel: {
     display: "flex",
     flexDirection: "column",
-    marginBottom: "3.5rem",
-    marginTop: "3.5rem",
+    marginBottom: ".5rem",
+    marginTop: ".5rem",
     backgroundColor: (props) => (props.isDarkMode ? colors.darkPurple : "#fff"),
     margin: (props) => (props.isMiniPanel ? "3rem 1rem" : "3.5rem 0"),
     padding: (props) => (props.isMiniPanel ? "1.5rem 1.5rem" : "1.5rem 3rem"),
@@ -16,7 +16,7 @@ export default {
       if (props.isMiniPanel) {
         return null;
       }
-      return "0 1.5rem 3rem rgba(0, 0, 0, 0.1)";
+      return "0 .5rem 1.5rem #2b7a78";
     },
 
     [sizes.down("lg")]: {
@@ -38,12 +38,12 @@ export default {
   },
 
   heading: {
-    fontSize: (props) => (props.isMiniPanel ? "1.5rem" : "2rem"),
+    fontSize: (props) => (props.isMiniPanel ? "1.2rem" : "1.5rem"),
     [sizes.down("lg")]: {
-      fontSize: (props) => (props.isMiniPanel ? "1.2rem" : "1.7rem"),
+      fontSize: (props) => (props.isMiniPanel ? ".8rem" : "1rem"),
     },
     [sizes.down("md")]: {
-      fontSize: (props) => (props.isMiniPanel ? "1rem" : "1.5rem"),
+      fontSize: (props) => (props.isMiniPanel ? ".5rem" : ".8rem"),
     },
   },
 
@@ -62,21 +62,19 @@ export default {
       }
       return color;
     },
-    fontSize: (props) => (props.isMiniPanel ? "2.2rem" : "3.5rem"),
-    paddingTop: ".5rem",
-    paddingBottom: ".5rem",
+    fontSize: (props) => (props.isMiniPanel ? "1.2rem" : "1.5rem"),
 
     [sizes.down("lg")]: {
-      fontSize: (props) => (props.isMiniPanel ? "1.5rem" : "3rem"),
+      fontSize: (props) => (props.isMiniPanel ? "1.5rem" : "2rem"),
     },
 
     [sizes.down("md")]: {
-      fontSize: (props) => (props.isMiniPanel ? "1.5rem" : "2rem"),
+      fontSize: (props) => (props.isMiniPanel ? ".5rem" : "1rem"),
     },
   },
 
   dataChange: {
-    fontSize: (props) => (props.isMiniPanel ? "1.4rem" : "inherit"),
+    fontSize: (props) => (props.isMiniPanel ? "1rem" : "inherit"),
     color: (props) => {
       let color;
       let title = props.title.toLowerCase();

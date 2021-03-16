@@ -74,10 +74,11 @@
     from{bottom:-300px;opacity:0} to{bottom:0;opacity:1}
 }
 
-
-
 .spantext{
     font-family: 'Poiret One', cursive;
     font-size: 30px;
-    animation: animatebottom 1s;
+}
+
+.animation{
+    animation: animationbottom 1s;
 }

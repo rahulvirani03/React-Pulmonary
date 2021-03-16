@@ -22,6 +22,7 @@
 }
 h1{
   font-family: 'Fjalla One', sans-serif;
+  font-size: 300% !important;
 }
 /* Navbar CSS */
 .nav1{
