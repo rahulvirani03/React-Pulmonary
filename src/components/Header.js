@@ -12,6 +12,7 @@ export default class Header extends Component {
                             <Nav>
                                 <Nav.Link href="/" className="navitem">Home</Nav.Link>
                                 <Nav.Link href="/Guidelines" className="navitem">Guidelines</Nav.Link>
+                                <Nav.Link href="/Vaccination" className="navitem">Vaccination Details</Nav.Link>
                                 <Nav.Link href="/Diagnosis" className="navitem">Diagnosis</Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
