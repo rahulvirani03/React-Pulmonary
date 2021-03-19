@@ -68,7 +68,6 @@
     width:20%;
     height:20%;
     position:relative;
-    animation:animatebottom 1s
 }
 @keyframes animatebottom{
     from{bottom:-300px;opacity:0} to{bottom:0;opacity:1}
@@ -81,4 +80,8 @@
 
 .animation{
     animation: animationbottom 1s;
+}
+
+.carouselText{
+    color: black;
 }

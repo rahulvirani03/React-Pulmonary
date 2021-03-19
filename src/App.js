@@ -16,7 +16,7 @@ class App extends Component {
         <Router>
           <Route exact path="/">
             <Redirect exact to="/Home"/>
-          </Route>                
+          </Route>   
           <Route path="/Home" component={CovidApp}/>
           <Route path="/Guidelines" component={GuidelineCard}/>
           <Route path="/Vaccination" component={VaccinationTable}/>

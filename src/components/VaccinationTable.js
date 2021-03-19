@@ -70,12 +70,18 @@ render() {
           icons={tableIcons}
             columns={[
               { title: "State", field: "state"},
-              { title: "State Code", field: "state_code"},
               { title: "Population", field: "population"},
+              {title:'Total Doses',field:'total_doses'},
+
               {
                 title: "Total Vaccinated",
                 field: "total_vaccinated",
               },
+              {
+                title: "Total Fully Vaccinated",
+                field: "total_fully_vaccinated",
+              }
+
             ]}
             data={this.state.sdata}
             title=""
