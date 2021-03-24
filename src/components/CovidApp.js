@@ -8,6 +8,7 @@ import stateCodes from '../constants/stateCodes';
 import * as animationData from '../assets/loading.json';
 import styles from '../styles/CovidAppStyles';
 import '../styles/DarkModeButton.css';
+import Main from './Main';
 const defaultOptions = {
   loop: true,
   autoplay: true,
@@ -155,8 +156,9 @@ class CovidApp extends Component {
 
     return (
       <>
-
         <div>
+          
+        <Main/>
           <Overview
             data={this.state.todayData}
             loadingStatus={this.loadingStatus}

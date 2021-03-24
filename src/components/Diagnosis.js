@@ -77,42 +77,28 @@ export default class Diagnosis extends Component {
     };
 
     handleSubmit = event => {
-        if(this.state.name==="" || !(new RegExp(/^(?:[A-Za-z]+)$/.test(this.state.name)))){
+        if(!(new RegExp(/^(?:[A-Za-z]+)$/.test(this.state.name)))){
             this.setState({
                 nameError: "Invalid name",
                 name:"",
             });
             event.preventDefault()
         }
-        if(this.state.phoneno==="" || (new RegExp(/^(?:[A-Za-z]+)$/.test(this.state.phoneno)))){
+        if((new RegExp(/^(?:[A-Za-z]+)$/.test(this.state.phoneno)))){
             this.setState({
                 phoneNoError: "Invalid number",
                 phoneno:"",
             });
             event.preventDefault()
         }
-        if(this.state.email==="" || (new RegExp(/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,15}/g).test(this.state.email))){
+        if((new RegExp(/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,15}/g).test(this.state.email))){
             this.setState({
                 emailError: "Invalid email",
                 email:"",
             });
             event.preventDefault()
         }
-        if(this.state.dob===""){
-            this.setState({
-                dobError: "Invalid DOB",
-                dob:"",
-            });
-            event.preventDefault()
-        }
-        if(this.state.addr===""){
-            this.setState({
-                addrError: "Invalid address",
-                addr:"",
-            });
-            event.preventDefault()
-        }
-        if(this.state.city==="" || !(new RegExp(/^(?:[A-Za-z]+)$/.test(this.state.city)))){
+        if(!(new RegExp(/^(?:[A-Za-z]+)$/.test(this.state.city)))){
             this.setState({
                 cityError: "Invalid city",
                 city:"",
@@ -126,20 +112,20 @@ export default class Diagnosis extends Component {
             });
             event.preventDefault()
         }
-        if(this.state.zip==="" || (new RegExp(/^(?:[A-Za-z]+)$/.test(this.state.zip)))){
+        if((new RegExp(/^(?:[A-Za-z]+)$/.test(this.state.zip)))){
             this.setState({
                 zipError: "Invalid number",
                 zip:"",
             });
             event.preventDefault()
         }
-        if(this.state.uploadFile===""){
-            this.setState({
-                uploadFileError: "Select a file",
-                uploadFile:"",
-            });
-            event.preventDefault()
-        }
+        // if(this.state.uploadFile===""){
+        //     this.setState({
+        //         uploadFileError: "Select a file",
+        //         uploadFile:"",
+        //     });
+        //     event.preventDefault()
+        // }
     }
     render() {
         return (
@@ -151,44 +137,44 @@ export default class Diagnosis extends Component {
                     <Form.Row>
                         <Form.Group as={Col} controlId="formGridName">
                         <Form.Label>Name</Form.Label>
-                        <Form.Control type="text" placeholder="Enter Patient's Name" value={this.state.name} onChange={this.handleNameChange}/>
+                        <Form.Control type="text" placeholder="Enter Patient's Name" required value={this.state.name} onChange={this.handleNameChange}/>
                         <Form.Text style={{color:'red'}}>{this.state.nameError}</Form.Text>
                         </Form.Group>
 
                         <Form.Group as={Col} controlId="formGridPhoneNo">
                         <Form.Label>Phone No.</Form.Label>
-                        <Form.Control type="text" placeholder="Enter Phone No." value={this.state.phoneno} onChange={this.handlePhoneNoChange}/>
+                        <Form.Control type="text" placeholder="Enter Phone No." required value={this.state.phoneno} onChange={this.handlePhoneNoChange}/>
                         <Form.Text style={{color:'red'}}>{this.state.phoneNoError}</Form.Text>
                         </Form.Group>
 
                         <Form.Group as={Col} controlId="formGridEmail">
                         <Form.Label>Email</Form.Label>
-                        <Form.Control type="email" placeholder="Enter Email ID" value={this.state.email} onChange={this.handleEmailChange}/>
+                        <Form.Control type="email" placeholder="Enter Email ID" required value={this.state.email} onChange={this.handleEmailChange}/>
                         <Form.Text style={{color:'red'}}>{this.state.emailError}</Form.Text>
                         </Form.Group>
 
                         <Form.Group as={Col} controlId="formGridDOB">
                         <Form.Label>Date of Birth</Form.Label>
-                        <Form.Control type="date" placeholder="Date" value={this.state.dob} onChange={this.handleDobChange}/>
+                        <Form.Control type="date" placeholder="Date" required value={this.state.dob} onChange={this.handleDobChange}/>
                         <Form.Text style={{color:'red'}}>{this.state.dobError}</Form.Text>
                         </Form.Group>
                     </Form.Row>
 
                     <Form.Group controlId="formGridAddress1">
                         <Form.Label>Address</Form.Label>
-                        <Form.Control placeholder="Patient's Address" value={this.state.addr} onChange={this.handleAddrChange}/>
+                        <Form.Control placeholder="Patient's Address" required value={this.state.addr} onChange={this.handleAddrChange}/>
                         <Form.Text style={{color:'red'}}>{this.state.addrError}</Form.Text>
                     </Form.Group>
                     <Form.Row>
                         <Form.Group as={Col} controlId="formGridCity">
                         <Form.Label>City</Form.Label>
-                        <Form.Control placeholder="Enter City Name" value={this.state.city} onChange={this.handleCityChange}/>
+                        <Form.Control placeholder="Enter City Name" required value={this.state.city} onChange={this.handleCityChange}/>
                         <Form.Text style={{color:'red'}}>{this.state.cityError}</Form.Text>
                         </Form.Group>
 
                         <Form.Group as={Col} controlId="formGridState">
                         <Form.Label>State</Form.Label>
-                        <Form.Control as="select" defaultValue={this.state.indiaState} onChange={this.handleIndiaStateChange}>
+                        <Form.Control as="select" required defaultValue={this.state.indiaState} onChange={this.handleIndiaStateChange}>
                             <option value="choose">Choose...</option>
                             <option value="maharashtra">Maharashtra</option>
                             <option value="goa">Goa</option>
@@ -198,14 +184,14 @@ export default class Diagnosis extends Component {
 
                         <Form.Group as={Col} controlId="formGridZip">
                         <Form.Label>Zip</Form.Label>
-                        <Form.Control placeholder="Enter Zip Code" value={this.state.zip} onChange={this.handleZipChange}/>
+                        <Form.Control placeholder="Enter Zip Code" required value={this.state.zip} onChange={this.handleZipChange}/>
                         <Form.Text style={{color:'red'}}>{this.state.zipError}</Form.Text>
                         </Form.Group>
                     </Form.Row>
 
                     <Form.Group id="formGridFile">
                         <Form.Label>Upload file</Form.Label>
-                        <Form.File value={this.state.uploadFile} onChange={this.handleUploadFileChange}></Form.File>
+                        <Form.File required value={this.state.uploadFile} onChange={this.handleUploadFileChange}></Form.File>
                         <Form.Text style={{color:'red'}}>{this.state.uploadFileError}</Form.Text>
                         <Form.Text id="fileUploadHelpBlock" muted>
                             Max. file size should be 256kb. File type can be image or .dicom

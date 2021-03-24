@@ -64,10 +64,9 @@
 }
 
 .imgs{
+    width: fit-content;
+    height: fit-content;
     margin: 2%;
-    width:20%;
-    height:20%;
-    position:relative;
 }
 @keyframes animatebottom{
     from{bottom:-300px;opacity:0} to{bottom:0;opacity:1}

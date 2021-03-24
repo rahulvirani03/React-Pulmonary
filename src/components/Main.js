@@ -3,11 +3,14 @@ import React from 'react';
 import Sanitize from '../assets/image/sanitize.webp';
 import SocialDist from '../assets/image/social_distancing.png';
 import Mask from '../assets/image/mask.webp';
+import AllThree from '../assets/image/allthree.png';
 import Button from '@material-ui/core/Button';
 import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 import {Link} from 'react-router-dom';
 import { useHistory } from "react-router";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Carousel from 'react-bootstrap/Carousel'
+
 
 
 function Main(){
@@ -31,46 +34,56 @@ function Main(){
         //             })}>Get Started</Button>
         //         </span>
         // </div>
-        <Carousel fade>
-            <Carousel.Item>
-                <img
-                className="d-block w-100"
-                src={Sanitize}
-                alt="First slide"
-                className="imgs"
-                />
-                <Carousel.Caption className="carouselText">
-                <h3>First slide label</h3>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-                <img
-                className="d-block w-100"
-                src={SocialDist}
-                alt="Second slide"
-                className="imgs"
-                />
+        <div style={{width:"100%", marginLeft:"auto", marginRight:"auto"}}>
+            <br/>
+            <Carousel fade style={{backgroundColor:"#3b3c3d"}}>
+                <Carousel.Item>
+                    <center><img
+                    src={Sanitize}
+                    style={{ width:"25%", height:"25%"}}
+                    alt="First slide"
+                    /></center>
+                    <Carousel.Caption>
+                    
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <center><img
+                    src={Mask}
+                    style={{ width:"25%", height:"25%"}}
+                    alt="First slide"
+                    /></center>
+                    <Carousel.Caption>
+                    
+                    </Carousel.Caption>
+                </Carousel.Item>
+                {/* <Carousel.Item>
+                    <img
+                    className="d-block w-50"
+                    src={SocialDist}
+                    alt="Second slide"
+                    />
 
-                <Carousel.Caption>
-                <h3>Second slide label</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-                <img
-                className="d-block w-100"
-                src={Mask}
-                alt="Third slide"
-                className="imgs"
-                />
+                    <Carousel.Caption>
+                    <h3>Second slide label</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                    className="d-block w-50"
+                    src={Mask}
+                    alt="Third slide"
+                    />
 
-                <Carousel.Caption>
-                <h3>Third slide label</h3>
-                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                </Carousel.Caption>
-            </Carousel.Item>
+                    <Carousel.Caption>
+                    <h3>Third slide label</h3>
+                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                    </Carousel.Caption>
+                </Carousel.Item> */}
             </Carousel>
+        </div>
+        
     );
 }
 export default Main;
