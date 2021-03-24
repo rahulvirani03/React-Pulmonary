@@ -68,38 +68,36 @@ const Signup = () => {
 
   
   return (
-   <div className='login'>
+    <div className='login'>
        <div className='loginContainer'>
-           <Form.Text className='header'>Sign Up Form</Form.Text>
-                  <label>Enter Name</label>
-                  <input type='email' autoFocus required value={name} onChange={e => setName(e.target.value)}/>
-                 <label>Enter Phone No.</label>
-                 <input type='text' required value={phone} onChange={e => setPhone(e.target.value)}/>
-               <label>Enter Email</label>
-                 <input type='email' required value={email} onChange={e => setEmail(e.target.value)}/>     
-                 <p className='errorMsg'>{emailError}</p>  
-                 <label>Hospital/Clinic Name</label>
-                 <input type='email' required value={hospital} onChange={e => setHospital(e.target.value)}/>                
-                 <label>Doctors Name:</label>
-                 <input type='email' required value={docname} onChange={e => setDocName(e.target.value)}/>      
-                 <label>Doctors Email:</label>
-                 <input type='email' required value={docemail} onChange={e => setDocEmail(e.target.value)}/>                
-                 <label>Enter Password</label>
-                 <input type='password' required value={password} onChange={e => setPassword(e.target.value)}/>
-                 <p className='errorMsg'>{passwordError}</p>  
-                <br></br>
-              <Button variant="outlined" className="btn1" type="submit" onClick={handleSignup}>Sign Up</Button>
-              <br/>
-              <p>Already have an account? <Button onClick={() =>
-              history.push({
-                pathname:'/Login'
-              })
-              }>Login</Button> </p>
-          
-             
-           
-         </div>    
-   </div>
+          <Form.Text className='header'>Sign Up Form</Form.Text>
+          <label>Enter Name:</label>
+          <input type='email' autoFocus required value={name} onChange={e => setName(e.target.value)}/>
+          <p/>
+          <label>Enter Phone No.:</label>
+          <input type='text' required value={phone} onChange={e => setPhone(e.target.value)}/>
+          <p/>
+          <label>Enter Email:</label>
+          <input type='email' required value={email} onChange={e => setEmail(e.target.value)}/>     
+          <p className='errorMsg'>{emailError}</p>  
+          <label>Hospital/Clinic Name:</label>
+          <input type='email' required value={hospital} onChange={e => setHospital(e.target.value)}/>                
+          <p/>
+          <label>Doctors Name:</label>
+          <input type='email' required value={docname} onChange={e => setDocName(e.target.value)}/>      
+          <p/>
+          <label>Doctors Email:</label>
+          <input type='email' required value={docemail} onChange={e => setDocEmail(e.target.value)}/>                
+          <p/>
+          <label>Enter Password:</label>
+          <input type='password' required value={password} onChange={e => setPassword(e.target.value)}/>
+          <p className='errorMsg'>{passwordError}</p>  
+          <br></br>
+          <Button variant="outlined" className="btn1" type="submit" onClick={handleSignup}>Sign Up</Button>
+          <br/>
+          <p>Already have an account? <Button onClick={() => history.push({pathname:'/Login'})}>Login</Button> </p>
+        </div>    
+    </div>
   );
 }
 

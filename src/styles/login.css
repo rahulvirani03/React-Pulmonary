@@ -2,7 +2,7 @@
 .login {
     width: 100%;
     min-height: 75vh;
-    /* padding: 0 20px; */
+    padding: 20px 0;
     justify-content: center;
     display: flex;
   }
@@ -36,6 +36,7 @@
       margin-left: auto;
       margin-right: auto;
       font-size: 24px;
+      font-weight: bold;
       margin-bottom: 30px;
       
    }
