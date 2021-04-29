@@ -129,7 +129,7 @@ function DataCard(props) {
                                 {doc.title}
                             </Card.Text>
                             <hr/>
-                            <center><Button className="btn1" variant="outlined"  href={doc.link} type="submit">More Information</Button></center>
+                            <center><Button className="btn1" variant="outlined"  href={doc.link} target="_blank" type="submit">More Information</Button></center>
                             
                         </Card.Body>
                     </Card>

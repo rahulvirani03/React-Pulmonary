@@ -9,6 +9,7 @@ import * as animationData from '../assets/loading.json';
 import styles from '../styles/CovidAppStyles';
 import '../styles/DarkModeButton.css';
 import Main from './Main';
+import StateTable from './Statewise';
 const defaultOptions = {
   loop: true,
   autoplay: true,
@@ -165,7 +166,7 @@ class CovidApp extends Component {
           />
         </div>
         <hr/>
-        <div className={classes.content}>
+        <div className={classes.content} style={{paddingBottom:0}}>
           <div className={classes.contentArea}>
             <div className={classes.mapArea}>
               <MapSection
@@ -175,10 +176,10 @@ class CovidApp extends Component {
             </div>
           </div>
           </div>
+          <hr></hr>
         <div>
-          
-        </div>
-          
+          <StateTable/>
+        </div> 
       </>
     );
   }

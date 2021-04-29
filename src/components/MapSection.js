@@ -99,7 +99,7 @@ class MapSection extends Component {
           <div className={classes.mapContainer}>
             <Map mapData={mapData} currentLocation={this.currentLocation} />
           </div>
-        </div>
+        </div>     
       </div>
     );
   }

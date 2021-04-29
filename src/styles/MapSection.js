@@ -3,7 +3,7 @@ import sizes from "./sizes";
 export default {
   mainContainer: {
     backgroundColor: "#def2f1",
-    padding: "7rem 3rem",
+    padding: "5rem 3rem",
     textAlign: "center",
 
     [sizes.down("md")]: {
