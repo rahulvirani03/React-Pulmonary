@@ -28,7 +28,7 @@ function Overview(props) {
             title="Confirmed"
             number={confirmed}
             isDarkMode={isDarkMode}
-            dataChange={deltaconfirmed > 0 ? deltaconfirmed : "-"}
+            // dataChange={deltaconfirmed > 0 ? deltaconfirmed : "-"}
           />
         </div>
         <div className={classes.panelContainer}>
@@ -36,7 +36,7 @@ function Overview(props) {
             title="Active"
             number={active}
             isDarkMode={isDarkMode}
-            dataChange={deltaActive}
+            // dataChange={deltaActive}
           />
         </div>
         <div className={classes.panelContainer}>
@@ -44,7 +44,7 @@ function Overview(props) {
             title="Recovered"
             number={recovered}
             isDarkMode={isDarkMode}
-            dataChange={deltarecovered}
+            // dataChange={deltarecovered}
           />
         </div>
         <div className={classes.panelContainer}>
@@ -52,7 +52,7 @@ function Overview(props) {
             title="Deceased"
             number={deaths}
             isDarkMode={isDarkMode}
-            dataChange={deltadeaths}
+            // dataChange={deltadeaths}
           />
         </div>
       </div>

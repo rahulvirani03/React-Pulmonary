@@ -10,6 +10,7 @@ import Main from "./components/Main"
 import LoginHandler from "./components/login_signup_handler"
 import Signup from "./components/signup";
 import DashBoard from "./components/DashBoard";
+import Resources from "./components/Resources";
 
 function App() 
 {
@@ -24,6 +25,7 @@ function App()
          <Route path ='/Main' component={Main}/>
           <Route path="/Home" component={CovidApp}/>
           <Route path="/Guidelines" component={GuidelineCard}/>
+          <Route path="/Resources" component={Resources}/>
           <Route path="/Vaccination" component={VaccinationTable}/>
           <Route path="/Diagnosis" component={Diagnosis}/>
           <Route path ='/Login' component={LoginHandler}/>

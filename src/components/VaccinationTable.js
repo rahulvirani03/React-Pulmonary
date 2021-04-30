@@ -64,8 +64,7 @@ render() {
     return (
         <div className="Vaccine">
           <br/>
-          <h2>Vaccination Details</h2>
-          <hr/>
+          <small>Source: india-covid19vaccine.github.io</small>
           <MaterialTable
           icons={tableIcons}
             columns={[

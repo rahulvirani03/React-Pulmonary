@@ -64,7 +64,7 @@ class MapSection extends Component {
                 title="Confirmed"
                 number={confirmed}
                 isDarkMode={isDarkMode}
-                dataChange={deltaconfirmed}
+                // dataChange={deltaconfirmed}
                 isMiniPanel={true}
               />
             </div>
@@ -73,7 +73,7 @@ class MapSection extends Component {
                 title="Active"
                 number={active}
                 isDarkMode={isDarkMode}
-                dataChange={deltaactive}
+                // dataChange={deltaactive}
                 isMiniPanel={true}
               />
             </div>
@@ -82,7 +82,7 @@ class MapSection extends Component {
                 title="Recovered"
                 number={recovered}
                 isDarkMode={isDarkMode}
-                dataChange={deltarecovered}
+                // dataChange={deltarecovered}
                 isMiniPanel={true}
               />
             </div>
@@ -91,7 +91,7 @@ class MapSection extends Component {
                 title="Deceased"
                 number={deaths}
                 isDarkMode={isDarkMode}
-                dataChange={deltadeaths}
+                // dataChange={deltadeaths}
                 isMiniPanel={true}
               />
             </div>

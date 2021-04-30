@@ -160,6 +160,13 @@ class CovidApp extends Component {
         <div>
           
         <Main/>
+        <br/>
+        <div style={{fontSize:15}} className={classes.lastUpdatedTime}>
+            Last Updated:{' '}
+            {this.formatDate(this.state.todayData.lastupdatedtime)}
+            <br/>Source: covid19india.org
+            
+          </div>
           <Overview
             data={this.state.todayData}
             loadingStatus={this.loadingStatus}
