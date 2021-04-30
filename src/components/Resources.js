@@ -1,10 +1,40 @@
 import React from 'react'
 import {Card,Button} from 'react-bootstrap'
-import Corona1 from '../assets/image/corona1.jpeg'
-import Corona2 from '../assets/image/corona2.jpeg'
-import Corona3 from '../assets/image/corona3.jpeg'
-import Corona4 from '../assets/image/corona4.jpeg'
-
+import an from '../assets/states/andaman&nicobar.png'
+import andhra from '../assets/states/andhra_pradesh.png'
+import arunachal from '../assets/states/arunachal_pradesh.png'
+import assam from '../assets/states/assam.png'
+import bihar from '../assets/states/bihar.png'
+import chandigarh from '../assets/states/chandigarh.png'
+import chhattisgarh from '../assets/states/chhattisgarh.png'
+import dn from '../assets/states/dadra&nagar.png'
+import dd from '../assets/states/daman&diu.png'
+import delhi from '../assets/states/delhi.png'
+import goa from '../assets/states/goa.png'
+import gujarat from '../assets/states/gujarat.jpg'
+import haryana from '../assets/states/haryana.png'
+import hp from '../assets/states/himachal_pradesh.png'
+import jk from '../assets/states/jammu&kashmir.png'
+import jharkhand from '../assets/states/jharkhand.png'
+import karnataka from '../assets/states/karnataka.png'
+import kerala from '../assets/states/kerala.png'
+import mp from '../assets/states/madhya_pradesh.png'
+import maharashtra from '../assets/states/maharashtra.png'
+import manipur from '../assets/states/manipur.png'
+import meghalaya from '../assets/states/meghalaya.png'
+import nagaland from '../assets/states/nagaland.png'
+import odisha from '../assets/states/odisha.png'
+import puducherry from '../assets/states/puducherry.png'
+import punjab from '../assets/states/punjab.png'
+import rajasthan from '../assets/states/rajasthan.png'
+import sikkim from '../assets/states/sikkim.png'
+import tn from '../assets/states/tamil_nadu.png'
+import telangana from '../assets/states/telangana.png'
+import tripura from '../assets/states/tripura.png'
+import up from '../assets/states/uttar_pradesh.png'
+import uttarakhand from '../assets/states/uttarakhand.png'
+import wb from '../assets/states/west_bengal.png'
+import Corona1 from "../assets/image/corona1.jpeg"
 import '../styles/GuideCard.css'
 
 function StateCard(props) {
@@ -16,7 +46,7 @@ function StateCard(props) {
     "Assam",
     "Bihar",
     "Chhattisgarh",
-    "Goa",
+    "Goa",  
     "Gujarat",
     "Haryana",
     "Himachal Pradesh",
@@ -49,170 +79,170 @@ function StateCard(props) {
     
         docs=[
             {
-                image:Corona1,
+                image:andhra,
                 title:states[0],
                 link:'https://life.coronasafe.network/andhra_pradesh'
             },
             {
-                image:Corona1,
+                image:arunachal,
                 title:states[1],
                 link:'https://life.coronasafe.network/arunachal_pradesh'
             },
             {
-                image:Corona1,
+                image:assam,
                 title:states[2],
                 link:'https://life.coronasafe.network/assam'
             },
             {
-                image:Corona1,
+                image:bihar,
                 title:states[3],
                 link:'https://life.coronasafe.network/bihar'
             },
             {
-                image:Corona1,
+                image:chhattisgarh,
                 title:states[4],
                 link:'https://life.coronasafe.network/chhattisgarh'
             },
             {
-                image:Corona1,
+                image:goa,
                 title:states[5],
                 link:'https://life.coronasafe.network/goa'
             }, {
-                image:Corona1,
+                image:gujarat,
                 title:states[6],
                 link:'https://life.coronasafe.network/gujarat'
             }
             , {
-                image:Corona1,
+                image:haryana,
                 title:states[7],
                 link:'https://life.coronasafe.network/haryana'
             }, {
-                image:Corona1,
+                image:hp,
                 title:states[8],
                 link:'https://life.coronasafe.network/himachal_pradesh'
             },
             {
-                image:Corona1,
+                image:jk,
                 title:states[9],
                 link:'https://life.coronasafe.network/jammu_&_kashmir_(ut)'
             },
             {
-                image:Corona1,
+                image:jharkhand,
                 title:states[10],
                 link:'https://life.coronasafe.network/jharkhand'
             },
             {
-                image:Corona1,
+                image:karnataka,
                 title:states[11],
                 link:'https://life.coronasafe.network/karnataka'
             },
             {
-                image:Corona1,
+                image:kerala,
                 title:states[12],
                 link:'https://life.coronasafe.network/kerala'
             },
             {
-                image:Corona1,
+                image:mp,
                 title:states[13],
                 link:'https://life.coronasafe.network/madhya_pradesh'
             },
             {
-                image:Corona1,
+                image:maharashtra,
                 title:states[14],
                 link:'https://life.coronasafe.network/maharashtra'
             },
             {
-                image:Corona1,
+                image:manipur,
                 title:states[15],
                 link:'https://life.coronasafe.network/manipur'
             },
             {
-                image:Corona1,
+                image:meghalaya,
                 title:states[16],
                 link:'https://life.coronasafe.network/meghalaya'
             },
             {
-                image:Corona1,
+                image:nagaland,
                 title:states[17],
                 link:'https://life.coronasafe.network/nagaland'
             },
             {
-                image:Corona1,
+                image:odisha,
                 title:states[18],
                 link:'https://life.coronasafe.network/odisha'
                 
             },
             {
-                image:Corona1,
+                image:punjab,
                 title:states[19],
                 link:'https://life.coronasafe.network/punjab'
              
             },
             {
-                image:Corona1,
+                image:rajasthan,
                 title:states[20],
                 link:'https://life.coronasafe.network/rajasthan'
             },
             {
-                image:Corona1,
+                image:sikkim,
                 title:states[21],
                 link:'https://life.coronasafe.network/sikkim'
             }, {
-                image:Corona1,
+                image:tn,
                 title:states[22],
                 link:'https://life.coronasafe.network/tamil_nadu'
             },
             {
-                image:Corona1,
+                image:telangana,
                 title:states[23],
                 link:'https://life.coronasafe.network/telangana'
             }, {
-                image:Corona1,
+                image:tripura,
                 title:states[24],
                 link:'https://life.coronasafe.network/tripura'
             },
             {
-                image:Corona1,
+                image:uttarakhand,
                 title:states[25],
                 link:'https://life.coronasafe.network/uttarakhand'
             },
             {
-                image:Corona1,
+                image:up,
                 title:states[26],
                 link:'https://life.coronasafe.network/uttar_pradesh'
             },
             {
-                image:Corona1,
+                image:wb,
                 title:states[27],
-                link:'https://life.coronasafe.network/uttarakhand'
-            },
-            {
-                image:Corona1,
-                title:states[28],
                 link:'https://life.coronasafe.network/west_bengal'
             },
             {
-                image:Corona1,
-                title:states[29],
+                image:an,
+                title:states[28],
                 link:'https://life.coronasafe.network/andaman_and_nicobar_islands_(ut)'
             },
             , {
-                image:Corona1,
-                title:states[30],
+                image:chandigarh,
+                title:states[29],
                 link:'https://life.coronasafe.network/chandigarh_(ut)'
             },
             {
-                image:Corona1,
+                image:dn,
+                title:states[30],
+                link:'https://life.coronasafe.network/dadra_and_nagar_haveli_and_daman_&_diu_(ut)'
+            },
+            {
+                image:dd,
                 title:states[31],
                 link:'https://life.coronasafe.network/dadra_and_nagar_haveli_and_daman_&_diu_(ut)'
             },
             {
-                image:Corona1,
+                image:delhi,
                 title:states[32],
                 link:'https://life.coronasafe.network/delhi_(nct)'
             },
             {
-                image:Corona1,
+                image:puducherry,
                 title:states[33],
                 link:'https://life.coronasafe.network/puducherry_(ut)'
             }
@@ -228,7 +258,9 @@ function StateCard(props) {
                 {docs && docs.map(doc => (
                         <Card style={{ width: '22rem' }} className='box'>
                             <Card.Img variant="top" src={doc.image}className='boximg'/>
+                            {/* <center>(State Map)</center> */}
                                 <Card.Body>
+                                <hr/>
                                 <center>
                                     <Card.Title>
                                         {doc.title}
