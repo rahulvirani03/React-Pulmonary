@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {Button} from '@material-ui/core'
 import {Form, Col} from 'react-bootstrap'
+import { Footer } from './Footer';
 import '../styles/Diagnosis.css'
 import { red } from '@material-ui/core/colors'
 
@@ -129,6 +130,7 @@ export default class Diagnosis extends Component {
     }
     render() {
         return (
+            <div className="main-container">
             <div className="Diagnosis">
                 <br/>
                 <h2>Patient Details</h2>
@@ -202,6 +204,8 @@ export default class Diagnosis extends Component {
                         Submit
                     </Button></center>
                     </Form>
+            </div>
+            <Footer/>
             </div>
         )
     }

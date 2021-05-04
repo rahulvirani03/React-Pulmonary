@@ -6,6 +6,7 @@ import Corona3 from '../assets/image/corona3.jpeg'
 import Corona4 from '../assets/image/corona4.jpeg'
 
 import '../styles/GuideCard.css'
+import { Footer } from './Footer'
 
 function DataCard(props) {
     
@@ -119,6 +120,7 @@ function DataCard(props) {
     ]
         
     return (
+        <div className="main-container">
         <div className='grid'>
             {docs && docs.map(doc => (
                     <Card style={{ width: '22rem' }} className='box'>
@@ -134,6 +136,8 @@ function DataCard(props) {
                         </Card.Body>
                     </Card>
                     ))}     
+        </div>
+        <Footer/>
         </div>
     );
 }

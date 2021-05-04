@@ -10,6 +10,7 @@ import styles from '../styles/CovidAppStyles';
 import '../styles/DarkModeButton.css';
 import Main from './Main';
 import StateTable from './Statewise';
+import { Footer } from './Footer';
 const defaultOptions = {
   loop: true,
   autoplay: true,
@@ -156,14 +157,13 @@ class CovidApp extends Component {
     }
 
     return (
-      <>
+      <div className="main-container">
         <div>
-          
         <Main/>
         <br/>
-        <div style={{fontSize:15}} className={classes.lastUpdatedTime}>
+        <div style={{fontSize:13, fontStyle:"italic"}} className={classes.lastUpdatedTime}>
             Last Updated:{' '}
-            {this.formatDate(this.state.todayData.lastupdatedtime)}
+            {this.formatDate(this.state.todayData.lastupdatedtime)} 
             <br/>Source: covid19india.org
             
           </div>
@@ -187,7 +187,8 @@ class CovidApp extends Component {
         <div>
           <StateTable/>
         </div> 
-      </>
+        <Footer/>
+      </div>
     );
   }
 }

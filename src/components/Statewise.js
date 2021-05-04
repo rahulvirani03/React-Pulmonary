@@ -150,7 +150,6 @@ render() {
               </Form.Group>
             </Form.Row>
           </Form>
-        <br></br>
           <MaterialTable
           icons={tableIcons}
             columns={[

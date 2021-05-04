@@ -19,6 +19,7 @@ import Search from '@material-ui/icons/Search';
 import ViewColumn from '@material-ui/icons/ViewColumn';
 import '../styles/Vaccination.css';
 import { makeStyles } from "@material-ui/core";
+import { Footer } from './Footer';
 
 
 class VaccinationTable extends Component {
@@ -62,9 +63,10 @@ render() {
         ViewColumn: forwardRef((props, ref) => <ViewColumn {...props} ref={ref} />),
       };
     return (
+      <div className="main-container">
         <div className="Vaccine">
           <br/>
-          <small>Source: india-covid19vaccine.github.io</small>
+          <div style={{fontSize:13, fontStyle:"italic"}}>Source: india-covid19vaccine.github.io</div>
           <MaterialTable
           icons={tableIcons}
             columns={[
@@ -95,6 +97,8 @@ render() {
               }
             }}
           />
+      </div>
+      <Footer/>
       </div>
     );
   }

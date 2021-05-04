@@ -6,6 +6,7 @@ import '../styles/login.css'
 import { useHistory } from "react-router";
 import 'firebase/firestore';
 import Loader from "react-loader-spinner";
+import { Footer } from './Footer'
 
 const Signup = () => {
     const [email, setEmail] = useState('');
@@ -68,6 +69,7 @@ const Signup = () => {
 
   
   return (
+    <div className="main-container">
     <div className='login'>
        <div className='loginContainer'>
           <Form.Text className='header'>Sign Up Form</Form.Text>
@@ -97,6 +99,8 @@ const Signup = () => {
           <br/>
           <p>Already have an account? <Button onClick={() => history.push({pathname:'/Login'})}>Login</Button> </p>
         </div>    
+    </div>
+    <Footer/>
     </div>
   );
 }

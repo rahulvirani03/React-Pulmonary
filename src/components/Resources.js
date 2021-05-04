@@ -36,6 +36,7 @@ import uttarakhand from '../assets/states/uttarakhand.png'
 import wb from '../assets/states/west_bengal.png'
 import Corona1 from "../assets/image/corona1.jpeg"
 import '../styles/GuideCard.css'
+import { Footer } from './Footer'
 
 function StateCard(props) {
     var docs
@@ -253,7 +254,7 @@ function StateCard(props) {
   
         
     return (
-        <div>
+        <div className="main-container">
             <div className='grid'>
                 {docs && docs.map(doc => (
                         <Card style={{ width: '22rem' }} className='box'>
@@ -272,6 +273,7 @@ function StateCard(props) {
                         </Card>
                         ))}     
             </div>
+            <Footer/>
         </div>
     );
 }

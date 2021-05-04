@@ -53,3 +53,18 @@ color: #feffff !important;
 -o-transition: background-color 250ms ease-in;
 transition: background-color 250ms ease-in;
 }
+
+.main-container {
+  min-height: 100vh; /* will cover the 100% of viewport */
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 100px; /* height of your footer */
+ }
+ .footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: #feffff;
+  background-color: #205a58;
+ }

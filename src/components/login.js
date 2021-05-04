@@ -4,6 +4,7 @@ import {Form} from 'react-bootstrap'
 import '../styles/login.css'
 import { useHistory } from "react-router";
 import Loader from "react-loader-spinner";
+import { Footer } from './Footer';
 
 const Login = (props) => {
   const { email,
@@ -16,6 +17,7 @@ const Login = (props) => {
   } = props;
   const history = useHistory();
   return (
+    <div className="main-container">
     <div className='login'>
       <div className='loginContainer'>
         <Form.Text className='header'>Login Details</Form.Text>
@@ -30,6 +32,8 @@ const Login = (props) => {
         <br/>
         <p>Don't have an account? <Button onClick={() => history.push({pathname:'/SignUp'})}>Sign up</Button> </p>
       </div>    
+    </div>
+    <Footer/>
     </div>
   );
 }

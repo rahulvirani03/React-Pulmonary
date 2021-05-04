@@ -27,7 +27,7 @@ export default {
   },
   para: {
     marginBottom: "3rem",
-    color: "#bbb",
+    color: "#a6a6a6",
   },
   container: {
     display: "flex",
