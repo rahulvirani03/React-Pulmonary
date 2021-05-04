@@ -27,7 +27,8 @@ class VaccinationTable extends Component {
      {
          super()
         this.state={
-            sdata:[]
+            sdata:[],
+            dt:""
         }
      }
 componentDidMount()
@@ -37,9 +38,18 @@ componentDidMount()
   
 }
 async getData(){
+    var dt1,i
     const res = await axios.get('https://india-covid19vaccine.github.io/api/state_latest.json')
+    for(i=0;i<res.data.length;i++)
+    {
+        if(res.data[i].state==='Maharashtra')
+        {
+            dt1 = res.data[i].last_updated
+        }
+    }
     console.log(res.data)
-    this.setState({sdata: res.data})
+    console.log(dt1)
+    this.setState({sdata: res.data, dt: dt1})
   
 }
 render() {
@@ -66,7 +76,7 @@ render() {
       <div className="main-container">
         <div className="Vaccine">
           <br/>
-          <div style={{fontSize:13, fontStyle:"italic"}}>Source: india-covid19vaccine.github.io</div>
+          <div style={{fontSize:13, fontStyle:"italic"}}>Source: india-covid19vaccine.github.io <br/>Last Updated: {this.state.dt}</div>
           <MaterialTable
           icons={tableIcons}
             columns={[
