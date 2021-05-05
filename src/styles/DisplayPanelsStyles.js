@@ -8,13 +8,13 @@ export default {
     marginBottom: ".5rem",
     marginTop: ".5rem",
     backgroundColor: (props) => (props.isDarkMode ? colors.darkPurple : "#fff"),
-    margin: (props) => (props.isMiniPanel ? "3rem 1rem" : "3.5rem 0"),
+    margin: (props) => (props.isMiniPanel ? "3rem 0.1rem" : "3.5rem 0"),
     padding: (props) => (props.isMiniPanel ? "1.5rem 1.5rem" : "1.5rem 3rem"),
     borderRadius: (props) => (props.isMiniPanel ? "2rem" : "2.5rem"),
 
     boxShadow: (props) => {
       if (props.isMiniPanel) {
-        return null;
+        return "0 .1rem .3rem #2b7a78";
       }
       return "0 .5rem 1.5rem #2b7a78";
     },

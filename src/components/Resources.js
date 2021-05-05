@@ -37,6 +37,7 @@ import wb from '../assets/states/west_bengal.png'
 import Corona1 from "../assets/image/corona1.jpeg"
 import '../styles/GuideCard.css'
 import { Footer } from './Footer'
+import Twitter from './Twitter'
 
 function StateCard(props) {
     var docs
@@ -255,6 +256,15 @@ function StateCard(props) {
         
     return (
         <div className="main-container">
+            <br/>
+            <center>
+                <div style={{fontStyle:"italic"}}>Find resources city wise from the twitter trends</div>
+                <br/>
+                <Twitter/>
+                <h1><hr/>OR<hr/></h1>
+                <div style={{fontStyle:"italic"}}>Find resources state wise from a crowd funded website</div>
+                </center>
+                
             <div className='grid'>
                 {docs && docs.map(doc => (
                         <Card style={{ width: '22rem' }} className='box'>

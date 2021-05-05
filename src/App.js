@@ -11,6 +11,7 @@ import LoginHandler from "./components/login_signup_handler"
 import Signup from "./components/signup";
 import DashBoard from "./components/DashBoard";
 import Resources from "./components/Resources";
+import Twitter from "./components/Twitter";
 
 function App() 
 {
@@ -26,6 +27,7 @@ function App()
           <Route path="/Home" component={CovidApp}/>
           <Route path="/Guidelines" component={GuidelineCard}/>
           <Route path="/Resources" component={Resources}/>
+          <Route path="/Twitter" component={Twitter}/>
           <Route path="/Vaccination" component={VaccinationTable}/>
           <Route path="/Diagnosis" component={Diagnosis}/>
           <Route path ='/Login' component={LoginHandler}/>

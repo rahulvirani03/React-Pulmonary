@@ -30,6 +30,7 @@
     "react-responsive-carousel": "^3.2.15",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.3",
+    "react-search-autocomplete": "^5.2.2",
     "react-simple-maps": "^2.0.0",
     "react-table": "^7.6.3",
     "react-tooltip": "^4.2.5",
