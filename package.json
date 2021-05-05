@@ -1,4 +1,5 @@
 {
+  "homepage": "https://kasliwaldipti.github.io/Pulmonary-disease-detection/",
   "name": "covid-19",
   "version": "0.1.0",
   "private": true,
@@ -17,6 +18,7 @@
     "classnames": "^2.2.6",
     "date-fns": "^2.13.0",
     "firebase": "^8.3.1",
+    "gh-pages": "^3.1.0",
     "material-table": "^1.69.2",
     "mdbreact": "^5.0.1",
     "react": "^16.13.1",
@@ -42,6 +44,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
