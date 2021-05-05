@@ -19,7 +19,7 @@ function App()
    <div>
       <Header/>  
         <Router basename={process.env.PUBLIC_URL}>    
-        <Route exact path="/">
+        <Route exact path={process.env.PUBLIC_URL}>
             <Redirect exact to="/Home"/>  
           </Route>
          <Route path ='/Main' component={Main}/>
