@@ -7,8 +7,10 @@ import Main from "./components/Main";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
+  <React.StrictMode>
   <HashRouter>
     <App/>
-  </HashRouter>,
+  </HashRouter>
+  </React.StrictMode>,
   document.getElementById('root')
 );
