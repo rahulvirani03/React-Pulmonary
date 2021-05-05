@@ -18,7 +18,7 @@ function App()
     return(
    <div>
       <Header/>  
-        <Router>    
+        <Router basename={process.env.PUBLIC_URL}>    
         <Route exact path="/">
             <Redirect exact to="/Home"/>  
           </Route>
