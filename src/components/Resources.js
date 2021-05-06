@@ -262,7 +262,7 @@ function StateCard(props) {
                 <br/>
                 <Twitter/>
                 <h1><hr/>OR<hr/></h1>
-                <div style={{fontStyle:"italic"}}>Find resources state wise from a crowd funded website</div>
+                <div style={{fontStyle:"italic"}}>Find resources state wise from a crowd sourced website</div>
                 </center>
                 
             <div className='grid'>

@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import '../styles/Twitter.css'
 import { ReactSearchAutocomplete } from 'react-search-autocomplete'
 import Button from '@material-ui/core/Button';
-import {Row,Col} from 'react-bootstrap'
-import { Footer } from './Footer';
+import {Row,Col, Table, Form} from 'react-bootstrap'
 class Twitter extends Component {
 
     constructor()
@@ -6150,28 +6149,28 @@ class Twitter extends Component {
       }
      return (
              <div className="Twitter">
-             <div style={{ width: 600 }}>
-             <Row>
-                <Col>
-                <ReactSearchAutocomplete
-                    items={IndiaCity}
-                    onSearch={handleOnSearch}
-                    onHover={handleOnHover}
-                    onSelect={handleOnSelect}
-                    onFocus={handleOnFocus}
-                    autoFocus
-                />
-                </Col> 
-                <Col>
-                <a href={this.state.link} target="__blank"> <Button variant="outlined" className="btn1" type="submit" style={{width:"10rem"}}>
-                        Get Twitter Trends
+                 <Form style={{width:"50%"}}>
+                     <Form.Row>
+                         
+                         <Form.Group as={Col}>
+                         <ReactSearchAutocomplete
+                            items={IndiaCity}
+                            onSearch={handleOnSearch}
+                            onHover={handleOnHover}
+                            onSelect={handleOnSelect}
+                            onFocus={handleOnFocus}
+                            autoFocus
+                        /> 
+                        </Form.Group>
+                        </Form.Row>
+                    <Form.Row>
+                    <Form.Group as={Col}>
+                         <a href={this.state.link} target="__blank"> <Button variant="outlined" className="btn1" type="submit">
+                        Twitter Trends
                     </Button> </a>
-                </Col>
-             </Row>
-             
-         
-       
-        </div>
+                         </Form.Group>
+                     </Form.Row>
+                 </Form>
         </div>
         );
     }
