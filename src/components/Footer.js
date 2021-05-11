@@ -4,7 +4,7 @@ export const Footer = () => {
     <div className="footer">
             <center>
             
-                &copy; {new Date().getFullYear()} Copyright: PID-32 (Dipti Kasliwal, Swapnil V. Pawar, Rahul Virani, Swapnil R. Pawar) 
+                &copy; {new Date().getFullYear()} Copyright: Team PDDA (Dipti Kasliwal, Swapnil V. Pawar, Rahul Virani, Swapnil R. Pawar) 
             
             </center>
     </div>

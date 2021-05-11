@@ -10,7 +10,7 @@ function Main(){
     const history = useHistory();
     return(
         <div style={{width:"100%", marginLeft:"auto", marginRight:"auto"}}>
-            <br/>
+            
             <Carousel fade style={{backgroundColor:"#3b3c3d"}}>
                 <Carousel.Item>
                     <center><img

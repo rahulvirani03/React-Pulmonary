@@ -1,0 +1,10 @@
+.disclaimer{
+    background-color: #feffff;
+    border-left-color: #205a58;
+    border-left-width: 9px;
+    border-left-style: solid;
+    
+    padding: 10px 35px 10px 16px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}

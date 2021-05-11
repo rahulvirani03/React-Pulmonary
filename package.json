@@ -17,6 +17,7 @@
     "classnames": "^2.2.6",
     "date-fns": "^2.13.0",
     "firebase": "^8.3.1",
+    "glyphicons": "^0.2.0",
     "material-table": "^1.69.2",
     "mdbreact": "^5.0.1",
     "netlify-cli": "^3.26.2",

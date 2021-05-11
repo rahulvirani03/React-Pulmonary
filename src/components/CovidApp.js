@@ -14,6 +14,7 @@ import { Footer } from './Footer';
 import { Modal } from 'react-bootstrap';
 import { Button, Card } from 'react-bootstrap';
 import PopupDisplay from './PopupDisplay'
+import '../styles/Disclaimer.css'
 const defaultOptions = {
   loop: true,
   autoplay: true,
@@ -171,11 +172,18 @@ class CovidApp extends Component {
         </div>
       );
     }
-
     return (
       <div>
+        <blockquote className="disclaimer">
+          <strong>Disclaimer!</strong>
+          <p style={{fontSize:'13px'}}>
+          This website is created by the engineering students seeking to help medical personnel and citizens of India during these challenging times.
+          The data displayed is acquired from various sources in real-time. The project creators do not guarentee the accuracy of the data.
+          </p>
+        </blockquote>
+        
       <div className="main-container">
-        <Modal
+        {/* <Modal
         aria-labelledby='modal-label'
         autoFocus={false}
         show={this.state.viewPopup}
@@ -186,7 +194,7 @@ class CovidApp extends Component {
           <p>The data displayed is just for information purposes acquired from various sources in real-time. The project creators do not guarentee the accuracy of the data</p>
           </div>
           
-        </Modal>
+        </Modal> */}
         <div>
         <Main/>
         <br/>
