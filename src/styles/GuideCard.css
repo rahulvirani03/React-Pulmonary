@@ -8,6 +8,23 @@
     box-shadow: 0 .5rem 1.5rem #2b7a78;
 
 }
+.boxMainPage{
+    margin: 20px;
+    padding:10px ; 
+    height:50%;
+    width:50%;
+    font-size: larger;
+    position: relative;
+    box-shadow: 0 .5rem 1.5rem #2b7a78;
+}
+.boxMapSec{
+    margin: 20px;
+    padding:10px ; 
+    height:35%;
+    width:35%;
+    position: relative;
+    box-shadow: 0 .5rem .5rem #2b7a78;
+}
 .box1,.box2,.box3,.box4,.box5,.box6,.box7,.box8,.box9,.box10{
     background-color: #ffffff;
     border-radius: 10px,10px,10px,10px;

@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import { withStyles } from "@material-ui/styles";
 
 import Map from "./Map";
+import {Card,Button} from 'react-bootstrap'
 import DisplayPanels from "./DisplayPanels";
+import '../styles/GuideCard.css'
 
 import styles from "../styles/MapSection";
 
@@ -59,7 +61,7 @@ class MapSection extends Component {
         </div>
         <div className={classes.container}>
           <div className={classes.panelsContainer}>
-            <div className={classes.singlePanel}>
+            {/* <div className={classes.singlePanel}>
               <DisplayPanels
                 title="Confirmed"
                 number={confirmed}
@@ -94,7 +96,39 @@ class MapSection extends Component {
                 // dataChange={deltadeaths}
                 isMiniPanel={true}
               />
-            </div>
+            </div> */}
+            <Card className='boxMapSec'>
+                <Card.Title>Confirmed</Card.Title>
+                <Card.Body>
+                <Card.Text style={{color: 'red'}}>
+                    {confirmed}
+                </Card.Text>
+            </Card.Body>
+        </Card>
+        <Card className='boxMapSec'>
+                <Card.Title>Active</Card.Title>
+                <Card.Body>
+                <Card.Text style={{color: 'orange'}}>
+                    {active}
+                </Card.Text>
+            </Card.Body>
+        </Card>
+        <Card className='boxMapSec'>
+                <Card.Title>Recovered</Card.Title>
+                <Card.Body>
+                <Card.Text style={{color: 'green'}}>
+                    {recovered}
+                </Card.Text>
+            </Card.Body>
+        </Card>
+        <Card className='boxMapSec'>
+                <Card.Title>Deceased</Card.Title>
+                <Card.Body>
+                <Card.Text style={{color: 'purple'}}>
+                    {deaths}
+                </Card.Text>
+            </Card.Body>
+        </Card>
           </div>
           <div className={classes.mapContainer}>
             <Map mapData={mapData} currentLocation={this.currentLocation} />

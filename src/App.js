@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from 'react'
 import "./App.css";
 import CovidApp from "./components/CovidApp";
 import { Route, BrowserRouter as Router, Redirect} from 'react-router-dom';
@@ -12,12 +12,17 @@ import Signup from "./components/signup";
 import DashBoard from "./components/DashBoard";
 import Resources from "./components/Resources";
 import Twitter from "./components/Twitter";
+import { Card, Button } from "react-bootstrap";
 
-function App() 
-{
+export default class App extends Component {
+  constructor(){
+    super();
+  }
 
-    return(
-   <div>
+  render() {
+    return (
+      
+      <div>
       <Header/>  
         <Router>    
         <Route exact path="/">
@@ -35,8 +40,8 @@ function App()
           <Route path ='/Dashboard' component={DashBoard}/>
         </Router>  
         </div>
-        )
+    );
   }
+}
 
 
-export default App;

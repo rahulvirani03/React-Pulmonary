@@ -6149,9 +6149,8 @@ class Twitter extends Component {
       }
      return (
              <div className="Twitter">
-                 <Form style={{width:"50%"}}>
+                 <Form style={{width:"75%"}}>
                      <Form.Row>
-                         
                          <Form.Group as={Col}>
                          <ReactSearchAutocomplete
                             items={IndiaCity}
@@ -6159,17 +6158,18 @@ class Twitter extends Component {
                             onHover={handleOnHover}
                             onSelect={handleOnSelect}
                             onFocus={handleOnFocus}
+                            maxResults={4}
+                            placeholder={"City"}
                             autoFocus
                         /> 
                         </Form.Group>
-                        </Form.Row>
-                    <Form.Row>
-                    <Form.Group as={Col}>
-                         <a href={this.state.link} target="__blank"> <Button variant="outlined" className="btn1" type="submit">
+                        <Form.Group as={Col}>    
+                        <Button variant="outlined" className="btn1" href={this.state.link} target="__blank" style={{height:"2.7rem"}}>
                         Twitter Trends
-                    </Button> </a>
+                        </Button>
                          </Form.Group>
-                     </Form.Row>
+                        </Form.Row>
+                    
                  </Form>
         </div>
         );

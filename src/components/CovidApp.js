@@ -11,6 +11,9 @@ import '../styles/DarkModeButton.css';
 import Main from './Main';
 import StateTable from './Statewise';
 import { Footer } from './Footer';
+import { Modal } from 'react-bootstrap';
+import { Button, Card } from 'react-bootstrap';
+import PopupDisplay from './PopupDisplay'
 const defaultOptions = {
   loop: true,
   autoplay: true,
@@ -45,8 +48,9 @@ class CovidApp extends Component {
       isLoading: false,
       mapData: [],
       tableData: [],
+      viewPopup: false,
     };
-
+  
     this.fetchData = this.fetchData.bind(this);
     this.formatData = this.formatData.bind(this);
     this.findId = this.findId.bind(this);
@@ -56,8 +60,17 @@ class CovidApp extends Component {
 
   componentDidMount() {
     this.fetchData();
+    let visited = localStorage['alreadyVisited'];
+        if(!visited){
+            this.setState({viewPopup: false})
+            console.log("In component visited")
+        }
+        else{
+            localStorage['alreadyVisited']=true;
+            this.setState({viewPopup: true})
+            console.log("In component else")
+        }
   }
-
   async fetchData() {
     this.setState({ isLoading: !this.state.isLoading });
     const countryData = axios.get('https://api.covid19india.org/data.json');
@@ -139,6 +152,10 @@ class CovidApp extends Component {
       )} IST`;
     } catch (err) {}
   }
+  modalDisplay(){
+    this.setState({ showModal: !this.state.showModal });
+  }
+  
 
   render() {
     const { classes } = this.props;
@@ -147,7 +164,6 @@ class CovidApp extends Component {
       isLoading,
       data,
     } = this.state;
-
     if (isLoading) {
       return (
         <div className={classes.loadingIcon}>
@@ -157,7 +173,20 @@ class CovidApp extends Component {
     }
 
     return (
+      <div>
       <div className="main-container">
+        <Modal
+        aria-labelledby='modal-label'
+        autoFocus={false}
+        show={this.state.viewPopup}
+        onHide={()=>this.setState({viewPopup:false})}
+        >
+          <div style={{padding:'32px'}}>
+          <h3>Disclaimer!</h3>
+          <p>The data displayed is just for information purposes acquired from various sources in real-time. The project creators do not guarentee the accuracy of the data</p>
+          </div>
+          
+        </Modal>
         <div>
         <Main/>
         <br/>
@@ -188,6 +217,7 @@ class CovidApp extends Component {
           <StateTable/>
         </div> 
         <Footer/>
+      </div>
       </div>
     );
   }
