@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {Card,Button} from 'react-bootstrap'
 import an from '../assets/states/andaman&nicobar.png'
 import andhra from '../assets/states/andhra_pradesh.png'
@@ -38,6 +38,7 @@ import Corona1 from "../assets/image/corona1.jpeg"
 import '../styles/GuideCard.css'
 import { Footer } from './Footer'
 import Twitter from './Twitter'
+import { Modal } from 'react-bootstrap';
 
 function StateCard(props) {
     var docs
@@ -252,7 +253,9 @@ function StateCard(props) {
         
         ]
     
-  
+        const[isOpen, setIsOpen] = useState(false);
+            
+        
         
     return (
         <div className="main-container">
@@ -278,7 +281,24 @@ function StateCard(props) {
                                     </Card.Title>
                                 </center>
                                 <hr/>
-                                <center><Button className="btn1" variant="outlined"  href={doc.link} target="__blank" type="submit">Show Resources</Button></center>
+                                <center><Button className="btn1" variant="outlined" onClick={()=>setIsOpen(true)}>Show Resources</Button></center>
+                                <Modal
+                                aria-labelledby='modal-label'
+                                autoFocus={false}
+                                show={isOpen}
+                                onHide={()=>setIsOpen(false)}
+                                >
+                                    <Modal.Header closeButton style={{background:'linear-gradient(to right, #205a58, #2b7a78, #3aafa9)', color:'#feffff'}}>
+                                        Alert!
+                                    </Modal.Header>
+                                    <Modal.Body>
+                                        This link will redirect you to a third party website. Are you sure you want to redirect?
+                                        <br/><br/>
+                                        <center>
+                                            <Button variant="outlined" className="btn1" href={doc.link} target="__blank" onClick={()=>setIsOpen(false)}>Okay</Button>
+                                        </center>
+                                    </Modal.Body>
+                                </Modal>
                             </Card.Body>
                         </Card>
                         ))}     

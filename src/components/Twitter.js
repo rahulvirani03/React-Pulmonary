@@ -3,16 +3,20 @@ import '../styles/Twitter.css'
 import { ReactSearchAutocomplete } from 'react-search-autocomplete'
 import Button from '@material-ui/core/Button';
 import {Row,Col, Table, Form} from 'react-bootstrap'
+import { Modal } from 'react-bootstrap';
+import { styled } from '@material-ui/core';
 class Twitter extends Component {
 
     constructor()
      {
         super()
         this.state={
-            link:""
+            link:"",
+            isOpen: false,
         }
      }
-
+    openModal = () => this.setState({ isOpen: true });
+    closeModal = () => this.setState({ isOpen: false });
     render() {
         const IndiaCity = [
             {
@@ -6143,10 +6147,9 @@ class Twitter extends Component {
         console.log(link1);
         
       }
-    
       const handleOnFocus = () => {
         console.log('Focused')
-      }
+      } 
      return (
              <div className="Twitter">
                  <Form style={{width:"75%"}}>
@@ -6163,13 +6166,30 @@ class Twitter extends Component {
                             autoFocus
                         /> 
                         </Form.Group>
-                        <Form.Group as={Col}>    
-                        <Button variant="outlined" className="btn1" href={this.state.link} target="__blank" style={{height:"2.7rem"}}>
+                        <Form.Group as={Col}>
+                        <Button variant="outlined" className="btn1" style={{height:"2.7rem"}} onClick={this.openModal}>
                         Twitter Trends
                         </Button>
                          </Form.Group>
                         </Form.Row>
-                    
+                        <Modal
+                        aria-labelledby='modal-label'
+                        autoFocus={false}
+                        show={this.state.isOpen}
+                        onHide={this.closeModal}
+                        >
+                            
+                            <Modal.Header closeButton style={{background:'linear-gradient(to right, #205a58, #2b7a78, #3aafa9)', color:'#feffff'}}>
+                                Alert!
+                            </Modal.Header>
+                            <Modal.Body>
+                                This link will redirect you to Twitter. Are you sure you want to redirect?
+                                <br/><br/>
+                                <center>
+                                    <Button variant="outlined" className="btn1" href={this.state.link} target="__blank" onClick={this.closeModal}>Okay</Button>
+                                </center>
+                            </Modal.Body>
+                        </Modal>
                  </Form>
         </div>
         );

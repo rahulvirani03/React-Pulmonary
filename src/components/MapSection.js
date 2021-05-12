@@ -97,8 +97,9 @@ class MapSection extends Component {
                 isMiniPanel={true}
               />
             </div> */}
+            <div className="grid">
             <Card className='boxMapSec'>
-                <Card.Title>Confirmed</Card.Title>
+                <Card.Title style={{fontSize:'16px'}}>Confirmed</Card.Title>
                 <Card.Body>
                 <Card.Text style={{color: 'red'}}>
                     {confirmed}
@@ -106,7 +107,7 @@ class MapSection extends Component {
             </Card.Body>
         </Card>
         <Card className='boxMapSec'>
-                <Card.Title>Active</Card.Title>
+                <Card.Title style={{fontSize:'16px'}}>Active</Card.Title>
                 <Card.Body>
                 <Card.Text style={{color: 'orange'}}>
                     {active}
@@ -114,7 +115,7 @@ class MapSection extends Component {
             </Card.Body>
         </Card>
         <Card className='boxMapSec'>
-                <Card.Title>Recovered</Card.Title>
+                <Card.Title style={{fontSize:'16px'}}>Recovered</Card.Title>
                 <Card.Body>
                 <Card.Text style={{color: 'green'}}>
                     {recovered}
@@ -122,17 +123,19 @@ class MapSection extends Component {
             </Card.Body>
         </Card>
         <Card className='boxMapSec'>
-                <Card.Title>Deceased</Card.Title>
+                <Card.Title style={{fontSize:'16px'}}>Deceased</Card.Title>
                 <Card.Body>
                 <Card.Text style={{color: 'purple'}}>
                     {deaths}
                 </Card.Text>
             </Card.Body>
         </Card>
+        </div>
           </div>
           <div className={classes.mapContainer}>
             <Map mapData={mapData} currentLocation={this.currentLocation} />
           </div>
+
         </div>     
       </div>
     );
