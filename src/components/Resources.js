@@ -254,7 +254,7 @@ function StateCard(props) {
         ]
     
         const[isOpen, setIsOpen] = useState(false);
-            
+        const[isSetLink, setLink] = useState(null);
         
         
     return (
@@ -281,7 +281,7 @@ function StateCard(props) {
                                     </Card.Title>
                                 </center>
                                 <hr/>
-                                <center><Button className="btn1" variant="outlined" onClick={()=>setIsOpen(true)}>Show Resources</Button></center>
+                                <center><Button className="btn1" variant="outlined" onClick={()=>{setIsOpen(true);setLink(doc.link)}}>Show Resources</Button></center>
                                 <Modal
                                 aria-labelledby='modal-label'
                                 autoFocus={false}
@@ -295,7 +295,7 @@ function StateCard(props) {
                                         This link will redirect you to a third party website. Are you sure you want to redirect?
                                         <br/><br/>
                                         <center>
-                                            <Button variant="outlined" className="btn1" href={doc.link} target="__blank" onClick={()=>setIsOpen(false)}>Okay</Button>
+                                            <Button variant="outlined" className="btn1" href={isSetLink} target="__blank" onClick={()=>setIsOpen(false)}>Okay</Button>
                                         </center>
                                     </Modal.Body>
                                 </Modal>
