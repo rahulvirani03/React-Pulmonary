@@ -200,7 +200,7 @@ class CovidApp extends Component {
         <br/>
         <div style={{fontSize:13, fontStyle:"italic"}} className={classes.lastUpdatedTime}>
             Last Updated:{' '}
-            {this.formatDate(this.state.todayData.lastupdatedtime)} 
+            {this.state.todayData.lastupdatedtime} 
             <br/>Source: covid19india.org
             
           </div>
