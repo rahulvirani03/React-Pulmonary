@@ -4,6 +4,10 @@ import {Form, Col} from 'react-bootstrap'
 import { Footer } from './Footer';
 import '../styles/Diagnosis.css'
 import { red } from '@material-ui/core/colors'
+import jsPDF from 'jspdf'
+import html2canvas from 'html2canvas'
+import 'firebase/firestore';
+import fire from '../firebase/config'
 
 export default class Diagnosis extends Component {
     constructor(props) {
@@ -81,57 +85,109 @@ export default class Diagnosis extends Component {
         if(!(new RegExp(/^(?:[A-Za-z]+)$/.test(this.state.name)))){
             this.setState({
                 nameError: "Invalid name",
-                name:"",
+                // name:"",
             });
             event.preventDefault()
         }
         if((new RegExp(/^(?:[A-Za-z]+)$/.test(this.state.phoneno)))){
             this.setState({
                 phoneNoError: "Invalid number",
-                phoneno:"",
+                // phoneno:"",
             });
             event.preventDefault()
         }
         if((new RegExp(/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,15}/g).test(this.state.email))){
             this.setState({
                 emailError: "Invalid email",
-                email:"",
+                // email:"",
             });
             event.preventDefault()
         }
         if(!(new RegExp(/^(?:[A-Za-z]+)$/.test(this.state.city)))){
             this.setState({
                 cityError: "Invalid city",
-                city:"",
+                // city:"",
             });
             event.preventDefault()
         }
         if(this.state.indiaState==="choose"){
             this.setState({
                 indiaStateError: "Select a state",
-                indiaState:"choose",
+                // indiaState:"choose",
             });
             event.preventDefault()
         }
         if((new RegExp(/^(?:[A-Za-z]+)$/.test(this.state.zip)))){
             this.setState({
                 zipError: "Invalid number",
-                zip:"",
+                // zip:"",
             });
             event.preventDefault()
         }
-        // if(this.state.uploadFile===""){
-        //     this.setState({
-        //         uploadFileError: "Select a file",
-        //         uploadFile:"",
-        //     });
-        //     event.preventDefault()
-        // }
+        if(this.state.uploadFile===""){
+            this.setState({
+                uploadFileError: "Select a file",
+                // uploadFile:"",
+            });
+            event.preventDefault()
+        }
+        const db = fire.firestore();
+    
+     
+      const userRef = db.collection('patients').add({
+        name: this.state.name,
+        phoneno: this.state.phoneno,
+        email: this.state.email,
+        addr: this.state.addr,
+        dob: this.state.dob,
+        city: this.state.city,
+        indiaState: this.state.indiaState,
+        zip: this.state.zip
+
+      });       
+      this.printDoc();
+    }
+    printDoc() {
+        // const input = document.getElementById('Diagnosis');
+        // html2canvas(input)
+        //   .then((canvas) => {
+        //     const imgData = canvas.toDataURL('image/png');
+        //     const pdf = new jsPDF();
+        //     pdf.addImage(imgData, 'JPEG', 0, 0);
+        //     // pdf.output('dataurlnewwindow');
+        //     pdf.save("download.pdf");
+        //   })
+        // ;
+        var doc = new jsPDF('p', 'pt');
+
+        doc.text(20, 20, 'This is the first title.')
+        doc.addFont('ArihelveticaalMS', 'helvetica', 'normal');
+        doc.setFont('helvetica')
+        //   doc.setFontType('normal')
+        doc.text(20, 60, 'This is the second title.')
+
+        doc.setFont('helvetica')
+        //   doc.setFontType('normal')
+        doc.text(20, 100, 'This is the thrid title.')      
+
+
+        doc.save('demo.pdf')
+        this.setState({
+            name:"",
+            phoneno:"",
+            email:"",
+            dob:"",
+            addr:"",
+            city:"",
+            indiaState:"choose",
+            zip:"",
+            uploadFile:"",
+        })
     }
     render() {
         return (
             <div className="main-container">
-            <div className="Diagnosis">
+            <div className="Diagnosis" id="Diagnosis">
                 <br/>
                 <h2>Patient Details</h2>
                 <hr/>
@@ -196,10 +252,9 @@ export default class Diagnosis extends Component {
                         <Form.File required value={this.state.uploadFile} onChange={this.handleUploadFileChange}></Form.File>
                         <Form.Text style={{color:'red'}}>{this.state.uploadFileError}</Form.Text>
                         <Form.Text id="fileUploadHelpBlock" muted>
-                            Max. file size should be 256kb. File type can be image or .dicom
+                            File type can be image or .dicom
                         </Form.Text>
                     </Form.Group>
-
                     <center><Button variant="outlined" className="btn1" type="submit">
                         Submit
                     </Button></center>
